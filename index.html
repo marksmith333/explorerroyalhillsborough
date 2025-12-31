@@ -4,50 +4,163 @@
   <meta charset="UTF-8">
   <title>Explorer Royal Hillsborough</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
-    body { font-family: Arial, sans-serif; margin:0; background:#f6f6f6; }
+    body { font-family: Arial, sans-serif; margin:0; background:#f6f6f6; color:#222; }
     header {
-      background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover;
+      background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover;
       color: white; padding: 80px 20px; text-align: center;
     }
-    section { max-width: 900px; margin: auto; padding: 30px 20px; background:white; }
-    h2 { margin-top:0; }
-    ul { line-height:1.8; }
-    footer { text-align:center; padding:20px; color:#666; }
-    a { color:#2b6cb0; text-decoration:none; }
+    header h1 { margin:0 0 10px; font-size: 40px; }
+    header p { margin:0; font-size: 18px; opacity:.95; }
+
+    .wrap { max-width: 980px; margin: 0 auto; padding: 24px 16px; }
+    .card {
+      background: #fff; border-radius: 14px; padding: 22px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.08);
+      margin: 18px 0;
+    }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    @media (min-width: 820px) { .grid { grid-template-columns: 1fr 1fr; } }
+
+    h2 { margin: 0 0 10px; }
+    h3 { margin: 0 0 8px; }
+    p { margin: 0 0 12px; line-height: 1.55; }
+    ul { margin: 0 0 12px; padding-left: 18px; line-height: 1.7; }
+
+    .btnrow { display:flex; flex-wrap:wrap; gap:10px; margin-top: 10px; }
+    .btn {
+      display:inline-block; padding:10px 14px; border-radius: 10px;
+      text-decoration:none; font-weight:600; border:1px solid #ddd;
+      background:#fafafa; color:#1a1a1a;
+    }
+    .btn.primary { background:#1f6feb; color:white; border-color:#1f6feb; }
+    .tagrow { display:flex; flex-wrap:wrap; gap:8px; margin: 8px 0 12px; }
+    .tag { font-size: 13px; padding:6px 10px; background:#f0f2f5; border-radius: 999px; }
+
+    footer { text-align:center; padding: 24px 12px; color:#666; }
+    .small { font-size: 13px; color:#666; }
   </style>
 </head>
+
 <body>
+  <header>
+    <h1>Explorer Royal Hillsborough</h1>
+    <p>Castle history • woodland walks • local heritage</p>
+  </header>
 
-<header>
-  <h1>Explorer Royal Hillsborough</h1>
-  <p>Discover history, nature & village life in Co. Down</p>
-</header>
+  <div class="wrap">
 
-<section>
-  <h2>Top Attractions</h2>
-  <ul>
-    <li><strong>Hillsborough Castle & Gardens</strong> – Royal residence with stunning grounds</li>
-    <li><strong>Hillsborough Forest Park</strong> – Walks, lakes and woodland trails</li>
-    <li><strong>The Square</strong> – Historic village centre, cafés and shops</li>
-  </ul>
+    <div class="card">
+      <h2>3 Highlights in Hillsborough, Co. Down</h2>
+      <p>
+        Here are three must-see spots: Hillsborough Castle & Gardens, St Malachy’s Church,
+        and Hillsborough Forest Park. Tap the buttons for official info, maps, and planning.
+      </p>
+      <p class="small">
+        Tip: If you’re on mobile, open links in a new tab so you can easily come back here.
+      </p>
+    </div>
 
-  <h2>Plan Your Visit</h2>
-  <p>
-    Hillsborough is one of Northern Ireland’s most picturesque villages, perfect for day trips,
-    walking, heritage and relaxed food stops.
-  </p>
+    <div class="grid">
 
-  <p>
-    <a href="https://www.historicroyalpalaces.com/hillsborough-castle/" target="_blank">
-      Visit Hillsborough Castle website →
-    </a>
-  </p>
-</section>
+      <!-- CASTLE -->
+      <div class="card">
+        <h3>Hillsborough Castle & Gardens</h3>
+        <div class="tagrow">
+          <span class="tag">Royal residence</span>
+          <span class="tag">Gardens</span>
+          <span class="tag">Tours</span>
+        </div>
+        <p>
+          A historic royal residence with beautifully maintained gardens and seasonal events.
+          Ideal for a half-day visit with cafés and gift shop on-site.
+        </p>
+        <ul>
+          <li>Best for: history lovers, gardens, photography</li>
+          <li>Allow: 2–4 hours (longer if you explore the grounds)</li>
+        </ul>
+        <div class="btnrow">
+          <a class="btn primary" href="https://www.historicroyalpalaces.com/hillsborough-castle/" target="_blank" rel="noopener">
+            Official website
+          </a>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hillsborough+Castle+and+Gardens" target="_blank" rel="noopener">
+            Open in Google Maps
+          </a>
+        </div>
+      </div>
 
-<footer>
-  © Explorer Royal Hillsborough
-</footer>
+      <!-- ST MALACHY'S -->
+      <div class="card">
+        <h3>St Malachy’s Church, Hillsborough</h3>
+        <div class="tagrow">
+          <span class="tag">Heritage</span>
+          <span class="tag">Architecture</span>
+          <span class="tag">Quiet stop</span>
+        </div>
+        <p>
+          A peaceful and historic church in the village—great for a quiet moment and a short
+          heritage stop while exploring Hillsborough’s streets and The Square.
+        </p>
+        <ul>
+          <li>Best for: local history, architecture, calm atmosphere</li>
+          <li>Allow: 20–45 minutes (more if you stroll the village)</li>
+        </ul>
+        <div class="btnrow">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=St+Malachy%27s+Church+Hillsborough" target="_blank" rel="noopener">
+            Open in Google Maps
+          </a>
+          <a class="btn primary" href="https://www.discovernorthernireland.com/" target="_blank" rel="noopener">
+            More things nearby
+          </a>
+        </div>
+      </div>
 
+      <!-- FOREST PARK -->
+      <div class="card">
+        <h3>Hillsborough Forest Park</h3>
+        <div class="tagrow">
+          <span class="tag">Woodland trails</span>
+          <span class="tag">Lakes</span>
+          <span class="tag">Family friendly</span>
+        </div>
+        <p>
+          A brilliant spot for fresh air, woodland walks and lakeside views. Perfect if you want
+          an easy nature break close to the village.
+        </p>
+        <ul>
+          <li>Best for: walking, picnics, dog walks, relaxed outdoors</li>
+          <li>Allow: 1–3 hours depending on the route</li>
+        </ul>
+        <div class="btnrow">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hillsborough+Forest+Park" target="_blank" rel="noopener">
+            Open in Google Maps
+          </a>
+          <a class="btn primary" href="https://www.visitlisburncastlereagh.com/" target="_blank" rel="noopener">
+            Local visitor guide
+          </a>
+        </div>
+      </div>
+
+      <!-- OPTIONAL: SIMPLE ITINERARY -->
+      <div class="card">
+        <h3>Simple Half-Day Itinerary</h3>
+        <ul>
+          <li><strong>Start:</strong> Coffee in The Square</li>
+          <li><strong>Mid:</strong> Hillsborough Castle & Gardens</li>
+          <li><strong>Then:</strong> Short stop at St Malachy’s</li>
+          <li><strong>Finish:</strong> Walk in Hillsborough Forest Park</li>
+        </ul>
+        <p class="small">Want a full-day version with food stops? Tell me and I’ll add it.</p>
+      </div>
+
+    </div>
+
+    <footer>
+      © Explorer Royal Hillsborough
+    </footer>
+
+  </div>
 </body>
 </html>
